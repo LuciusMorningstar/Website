@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Штаб Мисливців на демонів</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="logo.png">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Demon Slayer Logo" class="main-logo">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Стовпи (Хашіра)</a></li>
+            <li><a href="#">Стилі Дихання</a></li>
+            <li><a href="#" id="loginBtn">Вхід</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <article>
+                <h2>Останні новини з передової</h2>
+                <div class="content-placeholder">
+                    <p>Нещодавно завершився відбір на горі Фудзікасане. Семеро нових мечників успішно пройшли випробування і приєдналися до наших лав. Їм уже видано форму та клинки Нічірін.</p>
+                    <p>Також повідомляємо про підвищену активність демонів нижчих місяців у південних провінціях. Всім рангам від Мізуното до Кіноє бути в стані підвищеної готовності.</p>
+                </div>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Корисні посилання</h3>
+            <ul>
+                <li><a href="#">Запит на коваля</a></li>
+                <li><a href="#">Маєток Метелика</a></li>
+                <li><a href="#">Звіти Воронів Касугай</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Організація Мисливців на демонів. Всі права захищено.</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Авторизація</h2>
+            <form id="loginForm">
+                <label for="username"><b>Нікнейм</b></label>
+                <input type="text" placeholder="Введіть нік" id="username" required>
+                
+                <label for="password"><b>Пароль</b></label>
+                <input type="password" placeholder="Введіть пароль" id="password" required>
+                
+                <button type="submit">Увійти</button>
+                <p id="errorMessage" class="error-text"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
