@@ -3,59 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мисливці | Архів Мисливців</title>
-    <link rel="icon" href="logo.jpg" type="image/png">
+    <title>Мисливці | Архів</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="sparks-canvas"></canvas>
 
-    <div class="layout-wrapper">
-        <header class="header">
-            <h1>
-                <span class="glitch-word" data-text="ОРГАНІЗАЦІЯ">ОРГАНІЗАЦІЯ</span>
-                <span class="neon-word">МИСЛИВЦІВ</span>
-            </h1>
-        </header>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="hunters.html" class="nav-link active">Мисливці</a></li>
+            <li><a href="demons.html" class="nav-link">Демони</a></li>
+            <li><a href="#" id="login-btn" class="nav-link" style="color: #ff2a2a;">Вхід</a></li>
+        </ul>
+    </nav>
 
-        <main class="main-display-row">
-            <div class="content-area">
-                <div class="intro-text-block">
-                    <h2>⚔️ ІЄРАРХІЯ ОРГАНІЗАЦІЇ</h2>
-                    <p>Щоб стати мисливцем, необхідно пройти Фінальний Відбір на горі Фудзікасане. Після цього мечник отримує ранг, який підвищується за кількість вбитих демонів та успішно виконаних місій.</p>
-                </div>
+    <section class="image-row">
+        <div class="img-box"><img src="l1.jpg" alt="Сезон 1"></div>
+        <div class="img-box"><img src="l2.jpg" alt="Квартал червоних ліхтарів"></div>
+        <div class="img-box"><img src="l3.jpg" alt="Селище ковалів"></div>
+        <div class="img-box"><img src="l4.jpg" alt="Тренування Хашіра"></div>
+    </section>
 
-                <div class="demon-tier">
-                    <h2>Базові Ранги (від найнижчого до вищого)</h2>
-                    <div style="padding: 10px; color: #ddd; font-size: 1.1rem; line-height: 2;">
-                        <b>10. Мізуното</b> (Найнижчий ранг)<br>
-                        <b>9. Мізуное</b><br>
-                        <b>8. Каното</b><br>
-                        <b>7. Каное</b><br>
-                        <b>6. Цучіното</b><br>
-                        <b>5. Цучіное</b><br>
-                        <b>4. Хіното</b><br>
-                        <b>3. Хіное</b><br>
-                        <b>2. Кіното</b><br>
-                        <b>1. Кіное</b> (Найвищий серед звичайних мисливців)
-                    </div>
-                </div>
+    <header class="main-header">
+        <h1>ОРГАНІЗАЦІЯ МИСЛИВЦІВ</h1>
+    </header>
 
-                <div class="demon-tier" style="border-color: #ffaa00;">
-                    <h2 style="color: #ffaa00; border-bottom-color: #ffaa00;">🔥 ХАШІРА (СТОВПИ)</h2>
-                    <p style="padding: 10px;">Хашіра — це дев'ять найсильніших мечників організації. Кожен із них майстерно володіє своїм унікальним стилем Дихання та є останньою лінією оборони людства.</p>
-                    <img src="hashira.png" style="width: 100%; border-radius: 8px; border: 2px solid #ffaa00;" alt="Хашіра">
-                </div>
+    <main class="main-content">
+        <div class="demon-tier">
+            <h2 style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 10px;">Базові Ранги (від найнижчого до вищого)</h2>
+            <div style="padding: 10px; color: #ddd; font-size: 1.1rem; line-height: 2; text-align: center;">
+                10. Мізуното | 9. Мізуное | 8. Каното | 7. Каное | 6. Цучіното<br>
+                5. Цучіное | 4. Хіното | 3. Хіное | 2. Кіното | 1. Кіное
             </div>
+        </div>
 
-            <aside class="sidebar-right">
-                <a href="index.html" class="terminal-btn">ГОЛОВНА</a>
-                <a href="hunters.html" class="terminal-btn">РАНГИ МИСЛИВЦІВ</a>
-                <a href="demons.html" class="terminal-btn">КЛАСИФІКАЦІЯ ДЕМОНІВ</a>
-                <a href="#" id="login-btn" class="terminal-btn" style="border-color: #fff; color: #fff;">ВХІД</a>
-            </aside>
-        </main>
-    </div>
+        <div class="demon-tier" style="border-color: #ffaa00; text-align: center;">
+            <h2 style="color: #ffaa00; border-bottom: 1px solid #ffaa00; padding-bottom: 10px;">🔥 ХАШІРА (СТОВПИ)</h2>
+            <p style="padding: 10px;">Хашіра — це дев'ять найсильніших мечників організації. Кожен із них майстерно володіє своїм унікальним стилем Дихання та є останньою лінією оборони людства.</p>
+            <img src="hashira.png" style="width: 100%; max-width: 600px; border-radius: 8px; border: 2px solid #ffaa00;" alt="Хашіра">
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Проект LuciusMorningstar. Виконано згідно вимог Варіанту 05.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

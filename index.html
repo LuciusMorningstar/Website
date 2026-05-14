@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна | Архів Мисливців</title>
-    <link rel="icon" href="logo.jpg" type="image/png">
+    <title>Світ Клинка | Головна</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="sparks-canvas"></canvas> <div class="layout-wrapper">
-        <header class="header">
-            <h1>
-                <span class="glitch-word" data-text="СВІТ">СВІТ</span>
-                <span class="neon-word">КЛИНКА</span>
-            </h1>
-        </header>
+    <canvas id="sparks-canvas"></canvas>
 
-        <main class="main-display-row">
-            <div class="content-area">
-                <canvas id="neon-logo"></canvas>
-                
-                <div class="intro-text-block">
-                    <h2>📜 ЕПОХА ТАЙШО: ТІНІ ТА КРОВ</h2>
-                    <p>З давніх часів існують легенди про людиноподібних демонів, які ховаються в лісах і харчуються плоттю. Для більшості людей це лише страшні казки. Але ті, хто вижив після заходу сонця, знають правду.</p>
-                    <p>Демони володіють неймовірною силою, здатністю до миттєвої регенерації та можуть використовувати "Мистецтво Демонічної Крові". Звичайна зброя проти них безсила.</p>
-                    <p>Єдині, хто стоїть між людством і повним знищенням — це неофіційна організація <b>Мисливців на демонів</b>. Вони використовують особливі мечі "Нічірін" та техніки Дихання, щоб відтинати голови чудовиськам.</p>
-                </div>
-            </div>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="index.html" class="nav-link active">Головна</a></li>
+            <li><a href="hunters.html" class="nav-link">Мисливці</a></li>
+            <li><a href="demons.html" class="nav-link">Демони</a></li>
+            <li><a href="#" id="login-btn" class="nav-link" style="color: #ff2a2a;">Вхід</a></li>
+        </ul>
+    </nav>
 
-            <aside class="sidebar-right">
-                <a href="index.html" class="terminal-btn">ГОЛОВНА</a>
-                <a href="hunters.html" class="terminal-btn">РАНГИ МИСЛИВЦІВ</a>
-                <a href="demons.html" class="terminal-btn">КЛАСИФІКАЦІЯ ДЕМОНІВ</a>
-                <a href="#" id="login-btn" class="terminal-btn" style="border-color: #fff; color: #fff;">ВХІД</a>
-            </aside>
-        </main>
-    </div>
+    <section class="image-row">
+        <div class="img-box"><img src="l1.jpg" alt="Сезон 1"></div>
+        <div class="img-box"><img src="l2.jpg" alt="Квартал червоних ліхтарів"></div>
+        <div class="img-box"><img src="l3.jpg" alt="Селище ковалів"></div>
+        <div class="img-box"><img src="l4.jpg" alt="Тренування Хашіра"></div>
+    </section>
+
+    <header class="main-header">
+        <h1>АРХІВ МИСЛИВЦІВ НА ДЕМОНІВ</h1>
+    </header>
+
+    <main class="main-content">
+        <canvas id="neon-logo"></canvas>
+        
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; text-align: center;">
+            <h2>Епоха Тайшо: Світ між світлом і тінню</h2>
+            <p>У світі, де після заходу сонця прокидаються демони, лише невелика група майстрів меча стоїть на захисті людства. Цей сайт — цифровий архів, що містить дані про Організацію Мисливців та їхніх заклятих ворогів — Дванадцять Місяців Музана Кібуцуджі.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Проект LuciusMorningstar. Виконано згідно вимог Варіанту 05.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

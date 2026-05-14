@@ -3,100 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Демони | Архів Мисливців</title>
-    <link rel="icon" href="logo.jpg" type="image/png">
+    <title>Демони | Архів</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="sparks-canvas"></canvas>
 
-    <div class="layout-wrapper">
-        <header class="header">
-            <h1>
-                <span class="glitch-word" data-text="ДВАНАДЦЯТЬ">ДВАНАДЦЯТЬ</span>
-                <span class="neon-word">КІЗУКІ</span>
-            </h1>
-        </header>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="hunters.html" class="nav-link">Мисливці</a></li>
+            <li><a href="demons.html" class="nav-link active">Демони</a></li>
+            <li><a href="#" id="login-btn" class="nav-link" style="color: #ff2a2a;">Вхід</a></li>
+        </ul>
+    </nav>
 
-        <main class="main-display-row">
-            <div class="content-area">
-                
-                <div class="demon-tier">
-                    <h2>Король Демонів</h2>
-                    <div class="demon-card">
-                        <img src="muzan.jpg" alt="Музан">
-                        <div class="demon-info">
-                            <h3>Музан Кібуцуджі</h3>
-                            <p>Перший демон, що існує вже понад тисячу років. Джерело всієї демонічної крові.</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="image-row">
+        <div class="img-box"><img src="l1.jpg" alt="Сезон 1"></div>
+        <div class="img-box"><img src="l2.jpg" alt="Квартал червоних ліхтарів"></div>
+        <div class="img-box"><img src="l3.jpg" alt="Селище ковалів"></div>
+        <div class="img-box"><img src="l4.jpg" alt="Тренування Хашіра"></div>
+    </section>
 
-                <div class="demon-tier">
-                    <h2>Вищі Місяці</h2>
-                    <div class="demon-card">
-                        <img src="up1.jpg" alt="Вищий 1">
-                        <div class="demon-info"><h3>1. Кокушібо</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="up2.jpg" alt="Вищий 2">
-                        <div class="demon-info"><h3>2. Доума</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="up3.jpg" alt="Вищий 3">
-                        <div class="demon-info"><h3>3. Аказа</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="up4.jpg" alt="Вищий 4">
-                        <div class="demon-info"><h3>4. Хантенгу</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="up5.jpg" alt="Вищий 5">
-                        <div class="demon-info"><h3>5. Гьокко</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="up6.jpg" alt="Вищий 6">
-                        <div class="demon-info"><h3>6. Дакі та Гютаро</h3></div>
-                    </div>
-                </div>
+    <header class="main-header">
+        <h1>ДВАНАДЦЯТЬ КІЗУКІ</h1>
+    </header>
 
-                <div class="demon-tier">
-                    <h2>Нижчі Місяці</h2>
-                    <div class="demon-card">
-                        <img src="low1.jpg" alt="Нижчий 1">
-                        <div class="demon-info"><h3>1. Енму</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="low2.jpg" alt="Нижчий 2">
-                        <div class="demon-info"><h3>2. Рокуро</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="low3.jpg" alt="Нижчий 3">
-                        <div class="demon-info"><h3>3. Вакураба</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="low4.jpg" alt="Нижчий 4">
-                        <div class="demon-info"><h3>4. Мукаго</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="low5.jpg" alt="Нижчий 5">
-                        <div class="demon-info"><h3>5. Руї</h3></div>
-                    </div>
-                    <div class="demon-card">
-                        <img src="low6.jpg" alt="Нижчий 6">
-                        <div class="demon-info"><h3>6. Камануе</h3></div>
-                    </div>
+    <main class="main-content">
+        <div class="demon-tier">
+            <h2 style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 10px; text-align: center;">Король Демонів</h2>
+            <div class="demon-card">
+                <img src="muzan.jpg" alt="Музан">
+                <div class="demon-info">
+                    <h3 style="color: var(--accent);">Музан Кібуцуджі</h3>
+                    <p>Перший демон, що існує вже понад тисячу років. Джерело всієї демонічної крові.</p>
                 </div>
             </div>
+        </div>
 
-            <aside class="sidebar-right">
-                <a href="index.html" class="terminal-btn">ГОЛОВНА</a>
-                <a href="hunters.html" class="terminal-btn">РАНГИ МИСЛИВЦІВ</a>
-                <a href="demons.html" class="terminal-btn">КЛАСИФІКАЦІЯ ДЕМОНІВ</a>
-                <a href="#" id="login-btn" class="terminal-btn" style="border-color: #fff; color: #fff;">ВХІД</a>
-            </aside>
-        </main>
-    </div>
+        <div class="demon-tier">
+            <h2 style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 10px; text-align: center;">Вищі Місяці</h2>
+            <div class="demon-card"><img src="up1.jpg" alt="Вищий 1"><div class="demon-info"><h3>1. Кокушібо</h3></div></div>
+            <div class="demon-card"><img src="up2.jpg" alt="Вищий 2"><div class="demon-info"><h3>2. Доума</h3></div></div>
+            <div class="demon-card"><img src="up3.jpg" alt="Вищий 3"><div class="demon-info"><h3>3. Аказа</h3></div></div>
+            <div class="demon-card"><img src="up4.jpg" alt="Вищий 4"><div class="demon-info"><h3>4. Хантенгу</h3></div></div>
+            <div class="demon-card"><img src="up5.jpg" alt="Вищий 5"><div class="demon-info"><h3>5. Гьокко</h3></div></div>
+            <div class="demon-card"><img src="up6.jpg" alt="Вищий 6"><div class="demon-info"><h3>6. Дакі та Гютаро</h3></div></div>
+        </div>
+
+        <div class="demon-tier">
+            <h2 style="color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 10px; text-align: center;">Нижчі Місяці</h2>
+            <div class="demon-card"><img src="low1.jpg" alt="Нижчий 1"><div class="demon-info"><h3>1. Енму</h3></div></div>
+            <div class="demon-card"><img src="low2.jpg" alt="Нижчий 2"><div class="demon-info"><h3>2. Рокуро</h3></div></div>
+            <div class="demon-card"><img src="low3.jpg" alt="Нижчий 3"><div class="demon-info"><h3>3. Вакураба</h3></div></div>
+            <div class="demon-card"><img src="low4.jpg" alt="Нижчий 4"><div class="demon-info"><h3>4. Мукаго</h3></div></div>
+            <div class="demon-card"><img src="low5.jpg" alt="Нижчий 5"><div class="demon-info"><h3>5. Руї</h3></div></div>
+            <div class="demon-card"><img src="low6.jpg" alt="Нижчий 6"><div class="demon-info"><h3>6. Камануе</h3></div></div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Проект LuciusMorningstar. Виконано згідно вимог Варіанту 05.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
