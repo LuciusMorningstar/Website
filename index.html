@@ -3,65 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Штаб Мисливців на демонів</title>
+    <title>Головна | Архів Мисливців</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpeg" href="logo.png">
 </head>
 <body>
+    <canvas id="sparks-canvas"></canvas> <div class="layout-wrapper">
+        <header class="header">
+            <h1>
+                <span class="glitch-word" data-text="СВІТ">СВІТ</span>
+                <span class="neon-word">КЛИНКА</span>
+            </h1>
+        </header>
 
-    <header>
-        <img src="logo.png" alt="Demon Slayer Logo" class="main-logo">
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Стовпи (Хашіра)</a></li>
-            <li><a href="#">Стилі Дихання</a></li>
-            <li><a href="#" id="loginBtn">Вхід</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <main>
-            <article>
-                <h2>Останні новини з передової</h2>
-                <div class="content-placeholder">
-                    <p>Нещодавно завершився відбір на горі Фудзікасане. Семеро нових мечників успішно пройшли випробування і приєдналися до наших лав. Їм уже видано форму та клинки Нічірін.</p>
-                    <p>Також повідомляємо про підвищену активність демонів нижчих місяців у південних провінціях. Всім рангам від Мізуното до Кіноє бути в стані підвищеної готовності.</p>
+        <main class="main-display-row">
+            <div class="content-area">
+                <canvas id="neon-logo"></canvas>
+                
+                <div class="intro-text-block">
+                    <h2>📜 ЕПОХА ТАЙШО: ТІНІ ТА КРОВ</h2>
+                    <p>З давніх часів існують легенди про людиноподібних демонів, які ховаються в лісах і харчуються плоттю. Для більшості людей це лише страшні казки. Але ті, хто вижив після заходу сонця, знають правду.</p>
+                    <p>Демони володіють неймовірною силою, здатністю до миттєвої регенерації та можуть використовувати "Мистецтво Демонічної Крові". Звичайна зброя проти них безсила.</p>
+                    <p>Єдині, хто стоїть між людством і повним знищенням — це неофіційна організація <b>Мисливців на демонів</b>. Вони використовують особливі мечі "Нічірін" та техніки Дихання, щоб відтинати голови чудовиськам.</p>
                 </div>
-            </article>
+            </div>
+
+            <aside class="sidebar-right">
+                <a href="index.html" class="terminal-btn">ГОЛОВНА</a>
+                <a href="hunters.html" class="terminal-btn">РАНГИ МИСЛИВЦІВ</a>
+                <a href="demons.html" class="terminal-btn">КЛАСИФІКАЦІЯ ДЕМОНІВ</a>
+            </aside>
         </main>
-
-        <aside>
-            <h3>Корисні посилання</h3>
-            <ul>
-                <li><a href="#">Запит на коваля</a></li>
-                <li><a href="#">Маєток Метелика</a></li>
-                <li><a href="#">Звіти Воронів Касугай</a></li>
-            </ul>
-        </aside>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Організація Мисливців на демонів. Всі права захищено.</p>
-    </footer>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Авторизація</h2>
-            <form id="loginForm">
-                <label for="username"><b>Нікнейм</b></label>
-                <input type="text" placeholder="Введіть нік" id="username" required>
-                
-                <label for="password"><b>Пароль</b></label>
-                <input type="password" placeholder="Введіть пароль" id="password" required>
-                
-                <button type="submit">Увійти</button>
-                <p id="errorMessage" class="error-text"></p>
-            </form>
-        </div>
     </div>
 
     <script src="script.js"></script>
