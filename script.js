@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
         animateNeonLogo();
     }
 
-
     const modalOverlay = document.createElement('div');
     modalOverlay.id = 'photo-modal';
     
@@ -123,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const closeBtn = document.createElement('span');
     closeBtn.className = 'close-modal-btn';
-    closeBtn.innerHTML = '&times;';
+    closeBtn.innerHTML = '&times;'; 
 
     modalContainer.appendChild(closeBtn);
     modalContainer.appendChild(modalImage);
@@ -133,11 +132,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const demonPhotos = document.querySelectorAll('.demon-card img');
     
     demonPhotos.forEach(photo => {
-        photo.style.cursor = 'zoom-in';
+        photo.style.cursor = 'zoom-in'; 
         
         photo.addEventListener('click', () => {
-            modalImage.src = photo.src;
-            modalOverlay.classList.add('active');
+            modalImage.src = photo.src; 
+            modalOverlay.classList.add('active'); 
         });
     });
 
@@ -156,4 +155,60 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closePhotoModal();
     });
+
+    const loginBtn = document.getElementById('login-btn');
+    if (loginBtn) {
+        const loginModal = document.createElement('div');
+        loginModal.id = 'login-modal';
+        loginModal.style.cssText = `
+            display: none; position: fixed; z-index: 10000; left: 0; top: 0; 
+            width: 100%; height: 100%; background-color: rgba(5,2,2,0.9); backdrop-filter: blur(5px);
+            align-items: center; justify-content: center;
+        `;
+        
+        loginModal.innerHTML = `
+            <div style="background: #0b0c10; border: 2px solid #ff2a2a; padding: 30px; border-radius: 8px; width: 300px; position: relative;">
+                <span id="close-login" style="position: absolute; top: 10px; right: 15px; color: #ff2a2a; font-size: 24px; cursor: pointer;">&times;</span>
+                <h2 style="color: #ff2a2a; text-align: center; margin-top: 0;">СЕКРЕТНИЙ АРХІВ</h2>
+                
+                <input type="text" id="login-username" placeholder="Нікнейм" style="width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; background: #000; border: 1px solid #ff2a2a; color: #fff; font-family: inherit;">
+                
+                <input type="password" id="login-password" placeholder="Пароль" style="width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; background: #000; border: 1px solid #ff2a2a; color: #fff; font-family: inherit;">
+                
+                <p id="login-error" style="color: #ff2a2a; font-size: 13px; display: none; margin-bottom: 15px; text-align: center;">Такий користувач у системі не зареєстрований</p>
+                
+                <button id="login-submit" style="width: 100%; padding: 12px; background: rgba(255,42,42,0.1); border: 1px solid #ff2a2a; color: #ff2a2a; cursor: pointer; text-transform: uppercase; font-weight: bold; transition: 0.3s;">Увійти</button>
+            </div>
+        `;
+        document.body.appendChild(loginModal);
+
+        const closeLoginBtn = document.getElementById('close-login');
+        const loginSubmit = document.getElementById('login-submit');
+        const errorMsg = document.getElementById('login-error');
+
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            loginModal.style.display = 'flex';
+            errorMsg.style.display = 'none'; 
+        });
+
+        closeLoginBtn.addEventListener('click', () => loginModal.style.display = 'none');
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) loginModal.style.display = 'none';
+        });
+        
+        loginSubmit.addEventListener('click', () => {
+            const user = document.getElementById('login-username').value;
+            const pass = document.getElementById('login-password').value;
+            
+            if (user === "Superuser" && pass === "Superpassword") {
+                alert("Успішний вхід до Архіву Мисливців!");
+                loginModal.style.display = 'none';
+                document.getElementById('login-username').value = ""; 
+                document.getElementById('login-password').value = "";
+            } else {
+                errorMsg.style.display = 'block'; 
+            }
+        });
+    }
 });
