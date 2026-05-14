@@ -110,4 +110,50 @@ document.addEventListener("DOMContentLoaded", function() {
         
         animateNeonLogo();
     }
+
+
+    const modalOverlay = document.createElement('div');
+    modalOverlay.id = 'photo-modal';
+    
+    const modalContainer = document.createElement('div');
+    modalContainer.id = 'modal-img-container';
+    
+    const modalImage = document.createElement('img');
+    modalImage.id = 'modal-img';
+    
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'close-modal-btn';
+    closeBtn.innerHTML = '&times;';
+
+    modalContainer.appendChild(closeBtn);
+    modalContainer.appendChild(modalImage);
+    modalOverlay.appendChild(modalContainer);
+    document.body.appendChild(modalOverlay);
+
+    const demonPhotos = document.querySelectorAll('.demon-card img');
+    
+    demonPhotos.forEach(photo => {
+        photo.style.cursor = 'zoom-in';
+        
+        photo.addEventListener('click', () => {
+            modalImage.src = photo.src;
+            modalOverlay.classList.add('active');
+        });
+    });
+
+    function closePhotoModal() {
+        modalOverlay.classList.remove('active');
+    }
+
+    closeBtn.addEventListener('click', closePhotoModal);
+    
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closePhotoModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePhotoModal();
+    });
 });
